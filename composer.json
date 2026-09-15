@@ -1,0 +1,65 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "tradifylabs/laravel-craftile",
+    "description": "Laravel integration for the Craftile visual editor",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "craftile",
+        "cms",
+        "block-editor",
+        "visual-editor"
+    ],
+    "homepage": "https://github.com/bishwajitsz/laravel-craftile",
+    "support": {
+        "issues": "https://github.com/bishwajitsz/laravel-craftile/issues",
+        "source": "https://github.com/bishwajitsz/laravel-craftile"
+    },
+    "authors": [
+        {
+            "name": "Eldo Magan",
+            "email": "magan.eldo@gmail.com",
+            "role": "Original author"
+        },
+        {
+            "name": "TradifyLabs",
+            "email": "hello@tradifylabs.com",
+            "role": "Maintainer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Craftile\\Laravel\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^13.0",
+        "craftile/core": "^0.9",
+        "stillat/blade-parser": "^2.0",
+        "symfony/yaml": "^7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Craftile\\Laravel\\CraftileServiceProvider"
+            ],
+            "aliases": {
+                "Craftile": "Craftile\\Laravel\\Facades\\Craftile",
+                "BlockDatastore": "Craftile\\Laravel\\Facades\\BlockDatastore"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
